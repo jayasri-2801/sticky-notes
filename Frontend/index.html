@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Quick Sticky Notes</title>
+  <title>Creative Sticky Notes</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>📝 Quick Sticky Notes</h1>
-
-  <div class="input-container">
-    <input type="text" id="noteTitle" placeholder="Title">
-    <textarea id="noteBody" placeholder="Write your note"></textarea>
-    <button onclick="addNote()">Add Note</button>
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
+  <h1 class="title">✨things to Be noted</h1>
+
   <div id="notesGrid" class="notes-grid"></div>
+
+  <!-- Floating Add Button -->
+  <div class="fab" onclick="openModal()">+</div>
+
+  <!-- Modal -->
+  <div id="noteModal" class="modal">
+    <div class="modal-content">
+      <h2>Add New Note</h2>
+      <input type="text" id="noteTitle" placeholder="Title">
+      <textarea id="noteBody" placeholder="Write something..."></textarea>
+      <button onclick="addNote()">Save</button>
+      <button class="close-btn" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
